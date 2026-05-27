@@ -1,0 +1,116 @@
+body{
+    background: linear-gradient(135deg,#dbeafe,#bfdbfe,#93c5fd);
+    min-height:100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar-custom{
+    background: linear-gradient(90deg,#1e3a8a,#2563eb,#38bdf8);
+    box-shadow:0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.nav-link{
+    color:white !important;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.nav-link:hover{
+    transform:scale(1.1);
+    color:#dbeafe !important;
+}
+
+/* HERO */
+
+.hero-section{
+    padding:80px 20px;
+    animation: aparecer 1.5s ease;
+}
+
+.titulo-principal{
+    font-size:90px;
+    font-weight:bold;
+    color:#1e40af;
+}
+
+.subtitulo{
+    font-size:28px;
+    color:#2563eb;
+    margin-bottom:30px;
+}
+
+.btn-dashboard{
+    background:#2563eb;
+    color:white;
+    border-radius:30px;
+    padding:15px 40px;
+    transition:0.4s;
+    font-weight:bold;
+    border:none;
+}
+
+.btn-dashboard:hover{
+    background:#1d4ed8;
+    transform:scale(1.1);
+    color:white;
+}
+
+/* CARDS */
+
+.dashboard-card{
+    border:none;
+    border-radius:25px;
+    padding:20px;
+    transition:0.5s;
+    box-shadow:0px 8px 20px rgba(0,0,0,0.2);
+    background:white;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-15px);
+    box-shadow:0px 12px 30px rgba(37,99,235,0.3);
+}
+
+.icono{
+    font-size:70px;
+    color:#2563eb;
+}
+
+.btn-card{
+    background:#3b82f6;
+    color:white;
+    border-radius:20px;
+    font-weight:bold;
+    border:none;
+}
+
+.btn-card:hover{
+    background:#1d4ed8;
+    color:white;
+}
+
+/* FOOTER */
+
+.footer-custom{
+    margin-top:80px;
+    padding:20px;
+    background:#1e3a8a;
+    color:white;
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

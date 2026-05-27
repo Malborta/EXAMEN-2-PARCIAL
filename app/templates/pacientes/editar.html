@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card shadow-lg p-5">
+
+        <h1 class="mb-4">
+            Editar Paciente
+        </h1>
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label>Nombre</label>
+
+                <input type="text"
+                       name="nombre"
+                       class="form-control"
+                       value="{{ paciente.nombre }}">
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>Teléfono</label>
+
+                <input type="text"
+                       name="telefono"
+                       class="form-control"
+                       value="{{ paciente.telefono }}">
+
+            </div>
+
+            <button class="btn btn-warning">
+                Actualizar Paciente
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

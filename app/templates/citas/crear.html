@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card shadow-lg p-5">
+
+        <h1 class="mb-4">
+            Registrar Cita
+        </h1>
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label>Fecha</label>
+
+                <input type="date"
+                       name="fecha"
+                       class="form-control"
+                       required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>Hora</label>
+
+                <input type="time"
+                       name="hora"
+                       class="form-control"
+                       required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>Médico</label>
+
+                <select name="medico_id"
+                        class="form-select">
+
+                    {% for medico in medicos %}
+
+                    <option value="{{ medico.id }}">
+
+                        {{ medico.nombre }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>Paciente</label>
+
+                <select name="paciente_id"
+                        class="form-select">
+
+                    {% for paciente in pacientes %}
+
+                    <option value="{{ paciente.id }}">
+
+                        {{ paciente.nombre }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+            <button class="btn btn-primary">
+                Guardar Cita
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

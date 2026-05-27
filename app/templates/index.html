@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HERO -->
+
+<div class="hero-section text-center">
+
+    <h1 class="titulo-principal">
+        MediControl
+    </h1>
+
+    <p class="subtitulo">
+        Sistema Inteligente de Gestión Médica
+    </p>
+
+    <a href="/medicos" class="btn btn-lg btn-dashboard">
+        Ingresar al Sistema
+    </a>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="row mt-5">
+
+    <div class="col-md-4">
+
+        <div class="card dashboard-card">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-person-badge-fill icono"></i>
+
+                <h3>Médicos</h3>
+
+                <p>
+                    Gestión completa de médicos y especialidades.
+                </p>
+
+                <a href="/medicos" class="btn btn-card">
+                    Ver Médicos
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card dashboard-card">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-people-fill icono"></i>
+
+                <h3>Pacientes</h3>
+
+                <p>
+                    Registro y administración de pacientes.
+                </p>
+
+                <a href="/pacientes" class="btn btn-card">
+                    Ver Pacientes
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card dashboard-card">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-calendar2-heart-fill icono"></i>
+
+                <h3>Citas</h3>
+
+                <p>
+                    Agenda moderna de citas médicas.
+                </p>
+
+                <a href="/citas" class="btn btn-card">
+                    Ver Citas
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

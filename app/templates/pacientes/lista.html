@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>acientes</h1>
+
+<a href="/pacientes/crear" class="btn btn-success mb-3">
+    Nuevo Paciente
+</a>
+
+<table class="table table-dark table-hover">
+
+    <thead>
+
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        {% for paciente in pacientes %}
+
+        <tr>
+
+            <td>{{ paciente.id }}</td>
+            <td>{{ paciente.nombre }}</td>
+            <td>{{ paciente.telefono }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}

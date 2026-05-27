@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="d-flex justify-content-between mb-4">
+
+        <h1 class="text-dark">
+            Médicos
+        </h1>
+
+        <a href="/medicos/crear"
+           class="btn btn-success">
+
+            Nuevo Médico
+
+        </a>
+
+    </div>
+
+    <div class="card shadow-lg p-4">
+
+        <table class="table table-hover">
+
+            <thead class="table-dark">
+
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Especialidad</th>
+                    <th>Acciones</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for medico in medicos %}
+
+                <tr>
+
+                    <td>{{ medico.id }}</td>
+
+                    <td>{{ medico.nombre }}</td>
+
+                    <td>{{ medico.especialidad }}</td>
+
+                    <td>
+
+                        <a href="/medicos/editar/{{ medico.id }}"
+                           class="btn btn-warning btn-sm">
+
+                            Editar
+
+                        </a>
+
+                        <a href="/medicos/eliminar/{{ medico.id }}"
+                           class="btn btn-danger btn-sm">
+
+                            Eliminar
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
